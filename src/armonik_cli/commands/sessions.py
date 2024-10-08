@@ -167,7 +167,9 @@ def create(
             ),
             partition_ids=partition if partition else [default_partition],
         )
-    console.get_console().formatted_print({"SessionId": session_id}, format=output)
+        session = sessions_client.get_session(session_id=session_id)
+        session = _clean_up_status(session)
+        console.get_console().formatted_print(session, format=output, table_cols=SESSION_TABLE_COLS)
 
 
 def _clean_up_status(session: Session) -> Session:
