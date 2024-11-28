@@ -1,4 +1,5 @@
-from .sessions import sessions
+from armonik_cli.commands.config import config_group
+from armonik_cli.commands.session import session_group
 
 
-__all__ = ["sessions"]
+__all__ = ["config_group", "session_group"]
