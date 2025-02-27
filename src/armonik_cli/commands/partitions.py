@@ -15,7 +15,7 @@ PARTITIONS_TABLE_COLS = [("ID", "Id"), ("PodReserved", "PodReserved"), ("PodMax"
 
 @click.group(name="partition")
 @base_group
-def partitions() -> None:
+def partitions(**kwargs) -> None:
     """Manage cluster partitions."""
     pass
 
