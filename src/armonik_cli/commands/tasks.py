@@ -16,7 +16,7 @@ TASKS_TABLE_COLS = [("ID", "Id"), ("Status", "Status"), ("CreatedAt", "CreatedAt
 
 @click.group(name="task")
 @base_group
-def tasks() -> None:
+def tasks(**kwargs) -> None:
     """Manage cluster's tasks."""
     pass
 
